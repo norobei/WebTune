@@ -1,20 +1,56 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  </head>
-  <body>
-    <p class="text-primary">test-primary</p>
-    <p class="text-secondary">test-primary</p>
-    <p class="text-success">test-primary</p>
-    <p class="bg-danger">test</p>
-    <p class="bg-warning">fdsaf</p>
-    <p class="bg-info">asa</p>
-    
+<html lang="ja" class="h-100">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="h-100 vstack">
+  <header>
+    <h1 class="bg-primary text-white text-center p-5">らくらくWebTune</h1>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <input id="companyImage" type="file" name="example" accept="image/jpeg, image/png">
+          <div class="mb-3">
+            <label for="companyName" class="form-label">企業名</label>
+            <input type="text" class="form-control" id="companyName" placeholder="株式会社〇〇">
+          </div>
+          <div class="mb-3">
+            <label for="companyDescription" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="companyDescription" placeholder="会社の説明">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          </div>
+        </div>
+<!---Preview--->
+        <div class="col-6 bg-primary">
+          <img id="previewImage" src="images/sampleImage.jpg" alt="" class="img-fluid">
+          <h2 id="previewName">株式会社〇〇</h2>
+          <p id="previewDescription">ここに会社の説明が入ります。</p>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+
+  <footer class="mt-auto text-center p-2 bg-primary text-white">
+    @rakurakuWeb
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
 </html>
