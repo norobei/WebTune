@@ -26,4 +26,7 @@ const companyDescription = document.querySelector("#companyDescription");
 const previewDicription = document.querySelector("#previewDescription");
 companyDescription.addEventListener('input', () => {
     previewDicription.textContent = companyDescription.value;
+    if(companyDescription.value == "") {
+        previewDicription = "企業の説明を入力してください";
+    }
 })
