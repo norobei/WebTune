@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ja" class="h-100">
+<html lang="ja">
 
 <head>
   <meta charset="utf-8">
@@ -11,20 +11,21 @@
   <link rel="icon" href="images/icon.png">
 </head>
 
-<body class="h-100 vstack">
+<body class="h-100 vstack border border-5 border-primary">
   <header>
-    <h1 class="bg-primary text-white text-center p-5">らくらくWebTune</h1>
+    <h1 class="bg-primary text-white text-center p-5">WebTune</h1>
   </header>
-  <main>
-    <div class="container mt-3">
-      <div class="row">
+  <mains>
+    <div class="container mt-3 p-3">
+      <div class="row align-items-start">
         <div class="col-6">
-          <input id="companyImage" type="file" name="example" accept="image/jpeg, image/png">
-          <div class="mb-3">
-            <label for="companyName" class="form-label">企業名</label>
-            <input type="text" class="form-control" id="companyName" placeholder="株式会社〇〇">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="companyName" placeholder="name@example.com">
+            <label for="companyName">企業名</p></label>
           </div>
-          <div class="mb-3">
+          <p>画像</p>
+          <input id="companyImage" type="file" name="example" accept="image/jpeg, image/png">
+          <div class="my-3">
             <label for="companyDescription" class="form-label">企業の説明</label>
             <input type="email" class="form-control" id="companyDescription" placeholder="企業の説明を入力してください。">
           </div>
@@ -33,18 +34,17 @@
             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
           </div>
           <p>テーブル</p>
-          <div>
-            <div class="input-group mb-3">
+          <ul class="list-group">
+            <li class="input-group mb-3">
               <input type="text" class="form-control" placeholder="行1" aria-label="行1">
               <input type="text" class="form-control" placeholder="値を入力してください" aria-label="Server">
-            </div>
+            </li>
 
             <div class="input-group mb-3">
-
               <input type="text" class="form-control" placeholder="行2" aria-label="行2">
               <input type="text" class="form-control" placeholder="値を入力してください" aria-label="Server">
-            </div>
-          </div>
+              </li>
+          </ul>
           <div class="mb-3">
             <label for="companyAddress" class="form-label">会社住所</label>
             <input type="text" class="form-control" id="companyAddress" placeholder="住所を入力してください">
@@ -56,24 +56,28 @@
           </div>
         </div>
         <!---Preview--->
-        <div class="col-6 bg-primary">
+        <div class="col-6 border border-primary border-3">
+          <h2 id="previewName" class="pt-3">株式会社〇〇</h2>
           <img id="previewImage" src="images/sampleImage.jpg" alt="" class="img-fluid mt-2">
-          <h2 id="previewName">株式会社〇〇</h2>
           <p id="previewDescription">企業の説明を入力してください</p>
           <table class="table table-striped">
             <tbody>
               <tr>
-                <td>Mark</td><td>Otto</td>
+                <td>Mark</td>
+                <td>Otto</td>
               </tr>
               <tr>
-                <td>Jacob</td><td>Thornton</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
               </tr>
               <tr>
-                <td>Larry the Bird</td><td>@twitter</td>
+                <td>
+                  <address>住所</address>
+                </td>
+                <td>@twitter</td>
               </tr>
             </tbody>
           </table>
-          <p><address>住所が入ります。</address></p>
           <p>@Footer</p>
         </div>
       </div>
@@ -93,7 +97,7 @@
         <div class="modal-header">
           <label for="exampleFormControlInput1" class="form-label">Email address</label>
           <h1 class="modal-title fs-5" id="exampleModalLabel">サイトのURLを入力してください。/h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <input type="email" id="companyURL" class="form-control" placeholder="指定したいurlを入力してください。">
@@ -101,7 +105,7 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <form action=""></form>
-          <button type="button" id = "finishBtn"class="btn btn-primary">公開する</button>
+          <button type="button" id="finishBtn" class="btn btn-primary">公開する</button>
         </div>
       </div>
     </div>

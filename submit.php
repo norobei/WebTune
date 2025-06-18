@@ -9,9 +9,10 @@
 
 <body>
     <h1>ご利用ありがとうございます。</h1>
+    <p>
+    会社名は<?= $_POST['name'] ?>です
     <?php
-    $username = $_POST['name'];
-    echo "こんにちは、" . htmlspecialchars($username) . "さん！";
+    echo "こんにちは、" . htmlspecialchars($_POST['name']) . "さん！";
     $userURL = $_POST['URL'];
     ?>
     </p>
@@ -33,7 +34,7 @@ file_put_contents(
     <title>Document</title>
 </head>
 <body>
-    <h1>これは会社のホームページです</h1>
+    <h1>'.$_POST['name'].'</h1>
 </body>
 </html>'
 );
