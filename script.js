@@ -30,3 +30,34 @@ companyDescription.addEventListener('input', () => {
         previewDicription = "企業の説明を入力してください";
     }
 })
+
+document.querySelector("#finishBtn").addEventListener('click',()=> {
+    console.log("クリックされている")
+    const form = document.createElement("form");
+  form.method = "POST";
+  form.action = "submit.php";
+
+  const input1 = document.createElement("input");
+  input1.type = "hidden";
+  input1.name = "name";
+  input1.value = "3";
+
+  const input2 = document.createElement("input");
+  input2.type = "hidden";
+  input2.name = "id";
+  input2.value = "4";
+
+  const companyURL = document.querySelector("#companyURL").value;
+  console.log(companyURL);
+  const inputURL = document.createElement("input");
+  inputURL.type = "hidden";
+  inputURL.name = "URL";
+  inputURL.value = companyURL;
+
+  form.appendChild(input1);
+  form.appendChild(input2);
+  form.appendChild(inputURL);
+
+  document.body.appendChild(form);
+  form.submit();
+})
