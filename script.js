@@ -11,23 +11,16 @@ companyImage.addEventListener('change', (e) => {
         };
         reader.readAsDataURL(file);
     }
-
 })
 
-const companyName = document.querySelector("#companyName");
-const previewName = document.querySelector("#previewName");
-companyName.addEventListener('input', () => {
-    previewName.textContent = companyName.value;
+document.querySelectorAll(".create-preview").forEach((dom) => {
+    console.log(dom);
+    dom.addEventListener('input',() => {
+        const bb = document.querySelector(`#company_${dom.id}`);
+        bb.textContent = dom.value;
+    })
 })
 
-const companyDescription = document.querySelector("#companyDescription");
-const previewDicription = document.querySelector("#previewDescription");
-companyDescription.addEventListener('input', () => {
-    previewDicription.textContent = companyDescription.value;
-    if (companyDescription.value == "") {
-        previewDicription = "企業の説明を入力してください";
-    }
-})
 
 document.querySelector("#finishBtn").addEventListener('click', () => {
     const form = document.createElement("form");
